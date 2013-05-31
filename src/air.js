@@ -1,5 +1,5 @@
 var ingrUrl = /^http[s]?:\/\/(www\.)?ingress\.com/i; 
-// Called when the url of a tab changes.
+// Вызывается, когда адрес вкладки меняется.
 function checkForValidUrl(tabId, changeInfo, tab) {
     if( ingrUrl.test(tab.url) ) {
         chrome.pageAction.show(tabId);
