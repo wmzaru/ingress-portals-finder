@@ -102,7 +102,7 @@ function view( html, simple ) {
       sort( sortKey );
 
       render();
-    }).css('cursor', 'pointer').attr('title', 'Click to sort');
+    }).css('cursor', 'pointer').attr('title', 'Нажать для сортировки');
 
     $('.LevelBar .export').click(function(event){
       if(!window.kml) {
@@ -145,12 +145,12 @@ function view( html, simple ) {
 
 var INED = '<p style="color:#fc6;font-size:10pt">If already in, try "Query" again or following steps: <br/>1) close this window; &nbsp; &nbsp; &nbsp;<br/>2) reload the /intel page;<br/>3) re-open this window. &nbsp;</ol></p>'
 , NOTIFYS = {
-  'FAILED': 'Query Failed - Sign-In Required!' + INED
- ,'INVALID': 'Invalid Query!'
- ,'QUERYING': 'Querying Portals, It Takes Time ...<div class="spinning"><div class="ball"></div><div class="ball1"></div></div>'
- ,'NOAUTH': 'Sign-In Required!' + INED
- ,'ERROR': 'Query Error! [ <a id="myreload">Reload</a> ]'
- ,'UNKNOWN': 'Unknown Error! [ <a id="myreload">Reload</a> ]'
+  'FAILED': 'Сбой запроса - Войдите в систему!' + INED
+ ,'INVALID': 'Неверный запрос!'
+ ,'QUERYING': 'Запрос порталов, это займет время...<div class="spinning"><div class="ball"></div><div class="ball1"></div></div>'
+ ,'NOAUTH': 'Требуется входв систему!' + INED
+ ,'ERROR': 'Ошибка запроса! [ <a id="myreload">Перезагрузить</a> ]'
+ ,'UNKNOWN': 'Неизвестная ошибка! [ <a id="myreload">Перезагрузить</a> ]'
 };
 
 function fail( data ) {
@@ -238,7 +238,7 @@ function filter( results ) {
       , n = 0;
 
     if( idx ) {
-      var LevelBar = '<div class="LevelBar"><div class="note"><div class="level" style="height:11px;background-position:0 -98px"></div>Level <div class="energy" style="height:11px;background-position:-16px -98px"></div>Energy <div class="links" style="height:11px;background-position:-32px -98px"></div>Links  <div class="mods" style="height:11px;background-position:-48px -98px"></div>Mods</div>Level - <b>' + v +'</b> &nbsp;<span class="stat" lv="'+v+'"></span><div class="export" lv="'+v+'" title="Export KML">KML</div><a class="export-csv" lv="'+v+'" title="Export All Levels in CSV">CSV</a><a class="export-gpx" lv="'+v+'" title="Export All Levels in GPX">GPX</a></div>';
+      var LevelBar = '<div class="LevelBar"><div class="note"><div class="level" style="height:11px;background-position:0 -98px"></div>Уровень <div class="energy" style="height:11px;background-position:-16px -98px"></div>Энергия <div class="links" style="height:11px;background-position:-32px -98px"></div>Линки  <div class="mods" style="height:11px;background-position:-48px -98px"></div>Mods</div>Уровень - <b>' + v +'</b> &nbsp;<span class="stat" lv="'+v+'"></span><div class="export" lv="'+v+'" title="Экспорт KML">KML</div><a class="export-csv" lv="'+v+'" title="Экспорт ВСЕХ уровней в CSV">CSV</a><a class="export-gpx" lv="'+v+'" title="Экспорт ВСЕХ уровней в GPX">GPX</a></div>';
       if( sortKey && sortFn ) {
         idx.sort(sortFn);
       }
@@ -330,7 +330,7 @@ function render() {
   if( r && r.length > 0 ) {
     dr.postMessage({result: {list: r}}, '*');
   } else {
-    view( '<div class="notify">No Portals Matched This Level</div>', true );
+    view( '<div class="notify">Нет порталов с этим уровнем</div>', true );
   }
 }
 
@@ -647,10 +647,6 @@ $(document).ready(function(){
       $(this).attr('download', 'Ingress-IPf-Level-'+lv+'-'+timestr+'.kml');
       $(this).attr('href', kml($('#withimage:checked').length>0,lv));
     }
-  });
-
-  $('#mydonate').click(function(){
-    idonate('YSVEJMBLM3AFG');
   });
 });
 
