@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="mindon/at/gmail.com" site="http://mindon.github.com/">
+    <meta name="author" content="gintway/at/gmail.com" site="http://niantic.p.ht/">
     <title>
-All Local Portals  - Mindon.IDEA
+Все местные порталы  - niantic.p.ht
     </title>
 
     <style type="text/css">
@@ -149,20 +149,20 @@ li {
 </head>
 
  <body>
-<div id="mindon_ingr_map" style="width:100%; height:100%">loading google map...</div>
+<div id="mindon_ingr_map" style="width:100%; height:100%">загрузка google map...</div>
 <textarea id="tmpl_view" style="display:none">
 <div class="portal i<%= team %>">
 <div class="name"><%= name %></div>
   <ul>
     <li class="a-locate">
 
-<div class="resonators" title="Resonators"><%= resonators %></div>
+<div class="resonators" title="Резонаторы"><%= resonators %></div>
 <div class="status">
   <div class="stback"></div>
-  <div class="level" style="height:<%= level %>px;background-position:0 -<%= levelV %>px" title="Level"></div>
-  <div class="energy" style="height:<%= energy %>px;background-position:-16px -<%= energyV %>px" title="Energy"></div>
-  <div class="links" style="height:<%= links %>px;background-position:-32px -<%= linksV %>px" title="Links"></div>
-  <div class="mods" style="height:<%= mods %>px;background-position:-48px -<%= modsV %>px" title="Mods"></div>
+  <div class="level" style="height:<%= level %>px;background-position:0 -<%= levelV %>px" title="Уровень"></div>
+  <div class="energy" style="height:<%= energy %>px;background-position:-16px -<%= energyV %>px" title="Энергия"></div>
+  <div class="links" style="height:<%= links %>px;background-position:-32px -<%= linksV %>px" title="Линки"></div>
+  <div class="mods" style="height:<%= mods %>px;background-position:-48px -<%= modsV %>px" title="Моды"></div>
   <div style="height:109px;font-size:1px;width:1px;"></div>
 </div>
     </li>
@@ -177,7 +177,7 @@ li {
 </textarea>
 <div id="retry" style="display:none;text-align:center">
 <h2>Sorry, Google Map API 2.5K free Daily Quota Runs out</h2>
-<p>Use My Google Map API Key<br /><input type="text" id="mykey" size="36" placeholder="Your Google Map API Key"/><input type="button" value="Retry" id="mytry" /></p>
+<p>Use My Google Map API Key<br /><input type="text" id="mykey" size="36" placeholder="Ваш Google Map API Key"/><input type="button" value="Retry" id="mytry" /></p>
 </div>
 <div id="mylevels"><a id='lall' onclick="show('*')" class="at">All</a><a id='l0' onclick="show(0)">0</a><a id='l1' onclick="show(1)">1</a><a id='l2' onclick="show(2)">2</a>
 <a id='l3' onclick="show(3)">3</a><a id='l4' onclick="show(4)">4</a><a id='l5' onclick="show(5)">5</a>
