@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="mindon/at/gmail.com" site="http://mindon.github.com/">
+    <meta name="soauthor" content="gintway/at/gmail.com" site="http://niantic.p.ht/">
     <title>
-Ingress Portals Finder  - Mindon.IDEA
+Ingress порталы
     </title>
 
     <style type="text/css">
@@ -436,21 +436,23 @@ h1 {
     </style>
   </head>
 <body>
-<h1 id="about">Ingress Portals Finder</h1>
-<a id="mindon" href="http://mindon.github.com" target="_blank">Mindon.IDEA</a>
+<h1 id="about">Ingress порталы</h1>
+//<a id="mindon" href="http://mindon.github.com" target="_blank">Mindon.IDEA</a>
 <div id="myair">
   <ul>
-<li><label class="caption"><a id="places" title="Get from Google Maps">[..]</a> Area </label><input type="text" id="mymin" value="22.461721,113.858767" /> ~ <input type="text" id="mymax" value="22.569553,114.064761" /> <input type="button" value=" Query " id="mysubmit" /></li>
-<li><label class="caption">Keyword: </label><input type="text" id="mykey" value="" title="Inpute keywords separated by ," placeholder="City: Shenzhen, Hong Kong, ..." /><div id="myteam"><input type="checkbox" checked="checked" id="enlightened"><label for="enlightened" class="enlightened">Enlightened</label>  <input type="checkbox" checked="checked" id="resistance"><label for="resistance" class="resistance">Resistance</label> <input type="checkbox" checked="checked" id="neutral"><label for="neutral" class="neutral">Neutral</label></div></li>
-<li style="margin:0"><div class="total"> = <span id="mycurr">0</span><span style="color:#999"> / </span><span id="mytotal">0</span></div><div id="mylevels" title="CTRL/Command + Click to select Multi-Levels"><label class="caption"><span id="allev" title="Select All">[a]</span> Level: </label><a lv="0">0<u>0</u></a><a lv="1">1<u>0</u></a><a lv="2">2<u>0</u></a><a lv="3">3<u>0</u></a><a lv="4">4<u>0</u></a><a lv="5">5<u>0</u></a><a lv="6">6<u>0</u></a><a lv="7">7<u>0</u></a><a lv="8">8<u>0</u></a></div></li>
+<li><label class="caption"><a id="places" title="Получить из Google Maps">[..]</a> Область </label><input type="text" id="mymin" value="22.461721,113.858767" /> ~ <input type="text" id="mymax" value="22.569553,114.064761" /> <input type="button" value=" Запросить " id="mysubmit" /></li>
+<li><label class="caption">Ключевое слово: </label><input type="text" id="mykey" value="" title="Введите ключевое слово ," placeholder="Город: Kiev, Hong Kong, ..." /><div id="myteam"><input type="checkbox" checked="checked" id="enlightened"><label for="enlightened" class="enlightened">Просвещенные</label>  <input type="checkbox" checked="checked" id="resistance"><label for="resistance" class="resistance">Сопротивление</label> <input type="checkbox" checked="checked" id="neutral"><label for="neutral" class="neutral">Нейтральный</label></div></li>
+<li style="margin:0"><div class="total"> = <span id="mycurr">0</span><span style="color:#999"> / </span><span id="mytotal">0</span></div><div id="mylevels" title="CTRL + Выбрать несколько уровней"><label class="caption"><span id="allev" title="Выбрать ВСЕ">[a]</span> Уровень: </label><a lv="0">0<u>0</u></a><a lv="1">1<u>0</u></a><a lv="2">2<u>0</u></a><a lv="3">3<u>0</u></a><a lv="4">4<u>0</u></a><a lv="5">5<u>0</u></a><a lv="6">6<u>0</u></a><a lv="7">7<u>0</u></a><a lv="8">8<u>0</u></a></div></li>
   </ul>
 </div>
 <div id="mystage">
-<p align="center">Fill the bounds of your area, and click "Query"!<br /><br />Enjoy :-) <a id="mydonate">DONATE</a></p>
+<p align="center">Заполните пределы вашей области, и нажмите "Запрос"!<br /><br />Наслаждайтесь :-) <a id="mydonate">DONATE</a></p>
 </div>
-<div id="mapkey" style="display:none"><h3 style="color:red">Google Map API 25k free Daily Quota Runs out</h3>Use My Google Map API Key<br /><input type="text" id="mymapkey" size="20" placeholder="Your Google Map API Key"/><input type="button" value="Retry" id="mytry" /></div>
+<div id="mapkey" style="display:none"><h3 style="color:red">Google Map API 25k free Daily Quota Runs out</h3>Use My Google Map API Key<br /><input type="text" id="mymapkey" size="20" placeholder="Ваш Google Map API Key"/><input type="button" value="Повторить" id="mytry" /></div>
 
-<div align="center" style="clear:both;"><p style="width:420px;line-height:48px"><img src="48.png" align="left">by <b>Mindon</b> from <a href="http://mindon.github.com" target="_blank">Mindon.IDEA</a>. &nbsp; <span style="opacity:0.3">Thanks <a href="http://http://blog.shawtim.com/" target="_blank" title="for his Ingress: HK Portal List Extension">ShawTim</a></span></p></div>
+<!--
+<div align="center" style="clear:both;"><p style="width:420px;line-height:48px"><img src="48.png" align="left">by <b>Mindon</b> from <a href="http://mindon.github.com" target="_blank">Mindon.IDEA</a>. &nbsp; </p></div> 
+--->
 <textarea id="tmpl_view" style="display:none">
     <% for (i = 0; i < list.length; i ++) { %>
 <%= list[i].LevelBar || '' %>
@@ -463,13 +465,13 @@ h1 {
 <a class="map" target="_blank" href="http://maps.google.com/maps?q=<%= list[i].nameV %>@<%= list[i].lat %>,<%= list[i].lng %>" level="<%= list[i].level %>" team="<%= list[i].team %>"></a>
 <a class="ingr" target="_blank" href="http://www.ingress.com/intel?latE6=<%= list[i].latE6 %>&lngE6=<%= list[i].lngE6 %>&z=17"></a>
 </div>
-<div class="resonators" title="Resonators"><%= list[i].resonators.join('')||'-' %></div>
+<div class="resonators" title="Резонаторы"><%= list[i].resonators.join('')||'-' %></div>
 <div class="status">
   <div class="stback"></div>
-  <div class="level" style="height:<%= list[i].levelV %>px;background-position:0 -<%= 109-list[i].levelV %>px" title="Level"></div>
-  <div class="energy" style="height:<%= list[i].energyV %>px;background-position:-16px -<%= 109-list[i].energyV %>px" title="Energy"></div>
-  <div class="links" style="height:<%= list[i].linksV %>px;background-position:-32px -<%= 109-list[i].linksV %>px" title="Links"></div>
-  <div class="mods" style="height:<%= list[i].modsV %>px;background-position:-48px -<%= 109-list[i].modsV %>px" title="Mods"></div>
+  <div class="level" style="height:<%= list[i].levelV %>px;background-position:0 -<%= 109-list[i].levelV %>px" title="Уровень"></div>
+  <div class="energy" style="height:<%= list[i].energyV %>px;background-position:-16px -<%= 109-list[i].energyV %>px" title="Энергия"></div>
+  <div class="links" style="height:<%= list[i].linksV %>px;background-position:-32px -<%= 109-list[i].linksV %>px" title="Линки"></div>
+  <div class="mods" style="height:<%= list[i].modsV %>px;background-position:-48px -<%= 109-list[i].modsV %>px" title="Моды"></div>
   <div style="height:109px;font-size:1px;width:1px;"></div>
 </div>
     </li>
@@ -560,9 +562,9 @@ h1 {
   background: transparent url(max.png) no-repeat 0 0;
 }
 </style>
-<div id="myexport" style="display:none"><a target="_blank" title="Export only current level">Level <b>0</b></a> &nbsp; | &nbsp; <a target="_blank" title="Export All Levels">All</a> <input type="checkbox" id="withimage" checked title="With portal photo"/></div>
+<div id="myexport" style="display:none"><a target="_blank" title="Экспорт только текущий уровень">Level <b>0</b></a> &nbsp; | &nbsp; <a target="_blank" title="Экспорт ВСЕ уровни">ВСЕ</a> <input type="checkbox" id="withimage" checked title="С фотографиями порталов"/></div>
 <div id="myrange" style="display:none"></div>
-<div id="mymap" style="display:none"><iframe id="mapfr" frameBorder="0"></iframe><div id="mapbar"><a id="myloc" style="display:none" title="My Current Position">&#9678;</a><a id="myoff">×</a><a id="mybounds">Get Bounds</a><a id="bigmap" target="_blank" style="display:none">View Map Alone</a><a id="myall" style="display:none">All</a></div></div>
+<div id="mymap" style="display:none"><iframe id="mapfr" frameBorder="0"></iframe><div id="mapbar"><a id="myloc" style="display:none" title="Мое положение">&#9678;</a><a id="myoff">×</a><a id="mybounds">Получить границы</a><a id="bigmap" target="_blank" style="display:none">Посмотреть одну карту</a><a id="myall" style="display:none">ВСЕ</a></div></div>
 <style>
 .spinning {
   width: 100px;
@@ -605,10 +607,10 @@ h1 {
 	100% { -webkit-transform:rotate(-360deg); }
 }
 </style>
-<form id="fmdonate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="HCJSW6U8PUNEJ">
-</form>
+<!--<form id="fmdonate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<!--<input type="hidden" name="cmd" value="_s-xclick">
+<!--<input type="hidden" name="hosted_button_id" value="HCJSW6U8PUNEJ">
+<!--</form>
 <script src="kml.js"></script>
 </body>
 </html>
