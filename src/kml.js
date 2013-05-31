@@ -121,19 +121,19 @@ function kml(img, level) {
 
       if( valid && matched && same ) {
         kmlstr += '<Placemark><name>' + vxml(l.name) +'</name><description><![CDATA[<table>';
-        kmlstr += '<tr><td style="color:'+colors[l.team]+'" valign="top"><p>'+vxml(l.addr)+'</p><ul><li>Resonators: ' +vxml(l.resonators.join('') || '-') +'</li>';
-        kmlstr += '<li>Level: '+(0+l.level)+'</li>';
-        kmlstr += '<li>Energy: '+(0+l.energyLevel)+'</li>';
-        kmlstr += '<li>Links: '+(0+l.links)+'</li>';
-        kmlstr += '<li>Mods: '+(0+l.mods)+'</li></ul>';
-        kmlstr += !img?'<a href="'+l.imageUrl+'" target="_blank">View portal picture</a>':'';
+        kmlstr += '<tr><td style="color:'+colors[l.team]+'" valign="top"><p>'+vxml(l.addr)+'</p><ul><li>Резонаторы: ' +vxml(l.resonators.join('') || '-') +'</li>';
+        kmlstr += '<li>Уровень: '+(0+l.level)+'</li>';
+        kmlstr += '<li>Энергия: '+(0+l.energyLevel)+'</li>';
+        kmlstr += '<li>Линки: '+(0+l.links)+'</li>';
+        kmlstr += '<li>Моды: '+(0+l.mods)+'</li></ul>';
+        kmlstr += !img?'<a href="'+l.imageUrl+'" target="_blank">Смотреть картинку портала</a>':'';
         kmlstr += '</td>'+(img?'<td width="120"><img width="120" src="'+l.imageUrl+'" /></td>':'')+'</tr></table>';
         kmlstr += ']]></description><styleUrl>#'+l.team +( parseInt(l.level) > 0 ? l.level : '' )+'</styleUrl><Point><coordinates>'+l.lng+','+l.lat+',0</coordinates></Point></Placemark>';
       }
     });
   });
 
-  return 'data:application/vnd.google-earth.kml+xml;base64,'+Base64.encode('<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.2"><Document><name>Ingress Portals Finder</name><description>"Ingress Portals Finder" Chrome Extension, Developed by Mindon from http://mindon.github.com/</description><open>1</open>' +styles + kmlstr +'</Document></kml>', true);
+  return 'data:application/vnd.google-earth.kml+xml;base64,'+Base64.encode('<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://earth.google.com/kml/2.2"><Document><name>Ingress порталы</name><description>"Ingress порталы" Chrome расширение, Developed by Wmzaru from http://niantic.p.ht/</description><open>1</open>' +styles + kmlstr +'</Document></kml>', true);
 }
 
 function csv(img, level) {
